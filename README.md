@@ -11,7 +11,7 @@
 sudo apt-get update
 sudo apt-get install libcups2-dev libcupsimage2-dev cups system-config-printer gcc
  
-Wait a while for that all to process. Download these drivers, follow these instructions to get Star Micronics CUPS drivers. Set up printer in CUPS. Media size 72mmx30mm + fixed page length seems best for some reason. 20 characters per inch, 5.7 lines per inch. Job cancel after 10.
+Wait a while for that all to process. Download [these drivers](http://www.starmicronics.com/support/download.aspx?type=1&tabText=Linux%20CUPS%20Driver%20V3.6.0a&path=DriverFolder\drvr\starcupsdrv-3.6.0a_linux_20170914.tar.gz&id=1754&referrer=http://www.starmicronics.com/support/), follow these instructions to get [Star Micronics CUPS drivers](http://www.starmicronics.com/support/MannualFolder/common_tsp_linux_en.pdf). Set up printer in CUPS. Media size 72mmx30mm + fixed page length seems best for some reason. 20 characters per inch, 5.7 lines per inch. Job cancel after 10.
 
 Find poems. Make them into plain-text files. Put them in a folder. These words make it go:
 
