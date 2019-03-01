@@ -1,0 +1,12 @@
+find /home/pi/Desktop/PocketPoems/patron_poems -type f -print0 | shuf -zn1 | xargs -0 cat | while read line 
+do
+echo $line > /dev/usb/lp0
+done
+sleep 1
+sudo echo -e  " \n\n\n\x1b\x64\x02" > /dev/usb/lp0
+COUNTER_FILE="/home/pi/Desktop/PocketPoems/counterfrankenstein.txt"
+count=`cat $COUNTER_FILE`
+count=$((count+1))
+echo $count > $COUNTER_FILE
+
+

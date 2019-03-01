@@ -1,0 +1,21 @@
+loop_count = 0
+num_of_lines=12
+
+shuf -o /home/pi/Desktop/PocketPoems/poems/random_poems.txt < /home/pi/Desktop/PocketPoems/poems/random_poems.txt
+find /home/pi/Desktop/PocketPoems/poems -type f -print0 | shuf -zn1 | xargs -0 head -${num_of_lines} | while read line 
+do
+	echo $line > /dev/usb/lp0
+	loop_count=$((loop_count+1))
+	temp_count=$loop_count
+	if [ $(( $temp_count % 4)) -eq 0 ]; then
+		echo  > /dev/usb/lp0
+	fi
+done
+sleep 1
+sudo echo -e  " \n\n\n\x1b\x64\x02" > /dev/usb/lp0
+COUNTER_FILE="/home/pi/Desktop/PocketPoems/counter.txt"
+count=`cat $COUNTER_FILE`
+count=$((count+1))
+echo $count > $COUNTER_FILE
+
+
