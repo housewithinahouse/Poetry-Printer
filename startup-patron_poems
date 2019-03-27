@@ -1,6 +1,6 @@
 find /home/pi/Desktop/PocketPoems/patron_poems -type f -print0 | shuf -zn1 | xargs -0 cat | while read line 
 do
-echo $line > /dev/usb/lp0
+sudo echo -e "$line" > /dev/usb/lp0
 done
 sleep 1
 sudo echo -e  " \n\n\n\x1b\x64\x02" > /dev/usb/lp0
