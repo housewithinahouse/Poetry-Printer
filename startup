@@ -12,6 +12,10 @@ do
 	fi
 done
 sleep 1
+sudo echo -e  "\n" > /dev/usb/lp0
+sudo echo -e  ". . . . . . . . . . . . . . . . . . . . . ." > /dev/usb/lp0
+sudo echo -e  "Fourteen-ish Random Lines of Poetry" > /dev/usb/lp0
+sudo echo -e  "for National Poetry Month" > /dev/usb/lp0
 sudo echo -e  " \n\n\n\x1b\x64\x02" > /dev/usb/lp0
 COUNTER_FILE="/home/pi/Desktop/PocketPoems/counter.txt"
 count=`cat $COUNTER_FILE`
